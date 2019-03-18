@@ -1,5 +1,5 @@
 import React from 'react'
-import Router from 'react-router'
+import { BrowserRouter as Router, Route } from 'react-router'
 
 
 class App extends React.Component {
