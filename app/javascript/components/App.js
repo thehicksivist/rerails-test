@@ -2,6 +2,8 @@ import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Home from './Home'
 import NavBar from './Navbar'
+import Projects from './Projects'
+import Blog from './Blog'
 
 class App extends React.Component {
     render() {
@@ -12,7 +14,8 @@ class App extends React.Component {
                         <NavBar/>
 					</div>
                         <Route exact path="/" component={Home} />
-                        PROJECTS | BLOG
+                        <Route exact path="/projects" component={Projects} />
+                        <Route exact path="/blog" component={Blog} />
 					<div>
                         FOOTER
 					</div>
