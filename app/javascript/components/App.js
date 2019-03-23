@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Home from './Home'
 import NavBar from './Navbar'
 import Projects from './Projects'
-import Blog from './Blog'
+import Blog from './Blog/Blog'
 
 class App extends React.Component {
     render() {
