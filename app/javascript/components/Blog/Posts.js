@@ -1,12 +1,11 @@
 import React from 'react'
+import Post from './Post'
 
 const Posts = (props) => {
     let posts = props.posts.map((post) => {
         return(
             <div key={post.id}>
-                <h1>{post.title}</h1>
-                <p>{post.picture}</p>
-                <p>{post.description}</p>
+                <Post post={post}/>
             </div>
         )
     })
