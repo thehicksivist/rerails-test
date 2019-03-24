@@ -5,7 +5,8 @@ const NewPost = (props) => {
    
     return(
         <form onSubmit={ (e) => 
-            { props.handleFormSubmit(
+            {   
+                props.handleFormSubmit(
                 formFields.title.value, 
                 formFields.picture.value, 
                 formFields.description.value); 

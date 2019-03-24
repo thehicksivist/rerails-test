@@ -10,10 +10,28 @@ class PostsContainer extends React.Component {
             posts: []
         };
         this.handleFormSubmit = this.handleFormSubmit.bind(this)
+        this.addNewPost = this.addNewPost.bind(this)
     }
 
     handleFormSubmit(title, picture, description){
-        console.log(title, picture, description)
+        let body = JSON.stringify({post: {title: title, picture: picture, description: description} })
+
+        fetch('http://localhost:3000/posts', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: body,
+        }).then((response) => {return response.json()})
+            .then((post)=>{
+                this.addNewPost(post)
+        })
+    }
+
+    addNewPost(post){
+        this.setState({
+            posts: this.state.posts.concat(post)
+        })
     }
 
     componentDidMount(){
